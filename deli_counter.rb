@@ -10,12 +10,15 @@
 end 
 
 def take_a_number(katz_deli, name)
-  line = []
-  if katz_deli.empty? == true 
     katz_deli.push(name)
-  else 
-    katz_deli.each_with_index do |person, index|
-      puts "Welcome, #{person}. You are number #{index+1} in line." 
+        puts "Welcome, #{name}. You are number #{katz_deli.length} in line." 
 end
-end 
+
+def now_serving(katz_deli)
+  if katz_deli == 0 
+    puts "There is nobody waiting to be served!"
+  else 
+    puts "Currently serving" + katz_deli[0] +"."
+  end
+  katz_deli.unshift
 end 
